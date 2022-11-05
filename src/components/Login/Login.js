@@ -32,7 +32,7 @@ function Login() {
     //user payment check data
 
     useEffect(() => {
-        fetch('https://islavo.herokuapp.com/userdata')
+        fetch('http://localhost:5000/allmusic')
             .then(res => res.json())
             .then(userPaymentData => {
                 if (userPaymentData.length > 0) {
@@ -82,7 +82,7 @@ function Login() {
                             showConfirmButton: false,
                             timer: 2000
                         })
-                        history.push("/redy")
+                        history.replace(from);
 
                     }
 
@@ -91,7 +91,7 @@ function Login() {
                             const payments = data?.payment
 
                             if (payments === "paid") {
-                                history.push("/clicknow")
+                                history.push(from)
 
                             }
                         }
@@ -103,7 +103,7 @@ function Login() {
                                 showConfirmButton: false,
                                 timer: 2000
                             })
-                            history.push('/redy')
+                            history.push(from)
                         }
 
                     })
@@ -124,7 +124,7 @@ function Login() {
                             showConfirmButton: false,
                             timer: 2000
                         })
-                        history.push("/redy")
+                        history.push(from)
                     }
                     userPaymentDatas.filter(data => {
                         if (data?.Email === user.email) {
@@ -139,7 +139,7 @@ function Login() {
                                     timer: 2000
                                 })
 
-                                history.push("/clicknow")
+                                history.push(from)
                             }
                         }
                         else {
@@ -150,7 +150,7 @@ function Login() {
                                 showConfirmButton: false,
                                 timer: 2000
                             })
-                            history.push('/redy')
+                            history.push(from)
                         }
 
                     })

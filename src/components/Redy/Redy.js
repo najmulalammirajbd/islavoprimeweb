@@ -10,7 +10,7 @@ const Redy = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const onSubmit = data => {
-    fetch('https://islavo.herokuapp.com/addusers', {
+    fetch('http://localhost:5000/islavomusics', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -45,30 +45,23 @@ const Redy = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
 
           <div class="user-details">
-
             <div className="input-box">
 
-              <input defaultValue={loggedInUser.email} {...register('Email', { required: true })} placeholder=' আপনার ইমেইল' />
+              <input {...register('title', { required: true })} placeholder=' সংগীতের নাম' />
             </div>
 
             <div className="input-box">
 
-              <input {...register('name', { required: true })} placeholder=' আপনার নাম' />
-            </div>
-
-            <div className="input-box">
-
-              <input {...register('phone', { required: true })} placeholder=' আপনার মোবাইল' />
+              <input {...register('artist', { required: true })} placeholder=' আর্টিস্ট' />
             </div>
             <div className="input-box">
 
-              <input {...register('bkash_no', { required: true })} placeholder=' যে নাম্বার থেকে টাকা পাঠিয়েছেন ' />
+              <input {...register('url', { required: true })} placeholder=' অডিও ' />
             </div>
-            <input
-              {...register('payment', { required: true })}
-              value='paid'
-              style={{ display: 'none' }}
-            />
+            <div className="input-box">
+
+              <input {...register('id', { required: true })} placeholder=' আইডি ' />
+            </div>
           </div>
 
 

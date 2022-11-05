@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Login from './components/Login/Login';
 import Redy from './components/Redy/Redy';
+import Prime from './components/Redy/Prime';
+import Show from './components/Redy/Show';
 
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ClickNow from './components/ClickNow/ClickNow';
@@ -32,8 +34,14 @@ function App(props) {
           <Route path="/login" >
             <Login></Login>
           </Route>
-          <PrivateRoute path="/redy">
+          <PrivateRoute path="/music">
             <Redy></Redy>
+          </PrivateRoute>
+          <PrivateRoute path="/prime">
+            <Prime/>
+          </PrivateRoute>
+          <PrivateRoute path="/show">
+            <Show/>
           </PrivateRoute>
           <PrivateRoute path="/pay">
             <Pay></Pay>
