@@ -10,7 +10,7 @@ const Redy = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const onSubmit = data => {
-    fetch('http://localhost:5000/islavopremiums', {
+    fetch('https://iaudio.vercel.app/islavoprimiums', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ const Redy = () => {
             </div>
             <div className="input-box">
 
-              <input {...register('id', { required: true })} placeholder=' আইডি ' />
+            <input {...register('serialnumber', { required: true })} placeholder=' সিরিয়াল নাম্বার ' />
             </div>
           </div>
 

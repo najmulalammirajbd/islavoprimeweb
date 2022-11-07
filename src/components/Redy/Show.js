@@ -10,7 +10,7 @@ const Redy = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const onSubmit = data => {
-    fetch('http://localhost:5000/islavoshows', {
+    fetch('https://iaudio.vercel.app/islavoshows', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -37,10 +37,7 @@ const Redy = () => {
     <div className='body'>
 
       <div className="container">
-
-        <p>যে কোন বিকাশ অ্যাকাউন্টের payment অপশনে গিয়ে নিচের নাম্বারে ২২ টাকা পেমেন্ট করে নিচের ফরম পূরণ করুন । reference ও counter অপশনে 1 লিখুন  </p>
-
-        <div className='title'>01303920181</div>
+        <div className='title'>islavo show admin</div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -60,7 +57,7 @@ const Redy = () => {
             </div>
             <div className="input-box">
 
-              <input {...register('id', { required: true })} placeholder=' আইডি ' />
+              <input {...register('serialnumber', { required: true })} placeholder=' সিরিয়াল নাম্বার ' />
             </div>
           </div>
 

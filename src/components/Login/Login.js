@@ -32,7 +32,7 @@ function Login() {
     //user payment check data
 
     useEffect(() => {
-        fetch('http://localhost:5000/allmusic')
+        fetch('https://iaudio.vercel.app/allimusics')
             .then(res => res.json())
             .then(userPaymentData => {
                 if (userPaymentData.length > 0) {
