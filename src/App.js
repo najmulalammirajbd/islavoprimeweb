@@ -29,7 +29,7 @@ function App(props) {
       <Router>
         <Switch>
           <Route exact path="/" >
-            <Home></Home>
+          <Login></Login>
           </Route>
           <Route path="/login" >
             <Login></Login>

@@ -37,7 +37,7 @@ const Redy = () => {
     <div className='body'>
 
       <div className="container">
-        <div className='title'>islavo show admin</div>
+        <div className='title'>show </div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
 

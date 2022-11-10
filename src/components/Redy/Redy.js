@@ -38,9 +38,7 @@ const Redy = () => {
 
       <div className="container">
 
-        <p>যে কোন বিকাশ অ্যাকাউন্টের payment অপশনে গিয়ে নিচের নাম্বারে ২২ টাকা পেমেন্ট করে নিচের ফরম পূরণ করুন । reference ও counter অপশনে 1 লিখুন  </p>
-
-        <div className='title'>01303920181</div>
+        <div className='title'>music</div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
 

@@ -164,11 +164,9 @@ function Login() {
 
     return (
         <div>
-            <Navbar></Navbar>
             <div className="body">
-                <Step></Step>
                 <div className="container">
-                    <div className="title">সাইন-আপ অথবা সাইন-ইন করুন</div>
+                    <div className="title">islavo admin</div>
 
                     <form onSubmit={handleSubmit}>
 
@@ -177,12 +175,12 @@ function Login() {
 
                             <div className="input-box">
 
-                                <input type="text" name="email" onBlur={handleBlur} placeholder=" আপনার ইমেইল" />
+                                <input type="text" name="email" onBlur={handleBlur} placeholder=" email" />
                             </div>
 
                             <div className="input-box">
 
-                                <input type="password" name="password" onBlur={handleBlur} placeholder=" ছয় সংখ্যার পাসওয়ার্ড" />
+                                <input type="password" name="password" onBlur={handleBlur} placeholder=" password" />
                             </div>
 
 
@@ -199,10 +197,10 @@ function Login() {
 
                         <div className="button">
                             {/* <input type="submit" value={newUser ? 'সাইন আপ' : 'সাইন ইন'} /> */}
-                            <button className="btn" type="submit"><FontAwesomeIcon icon={faSignInAlt} /> {newUser ? 'সাইন আপ' : 'সাইন ইন'}</button>
+                            <button className="btn" type="submit"><FontAwesomeIcon icon={faSignInAlt} /> {newUser ? 'সাইন আপ' : 'log-in'}</button>
                         </div>
-                        <button className="btn" htmlFor="newUser" onClick={() => setNewUser(!newUser)} name="newUser" > <FontAwesomeIcon icon={faUser} /> নতুন অ্যাকাউন্ট</button><br />
-                        <button className="btn" onClick={resetpassbtn} > <FontAwesomeIcon icon={faLock} /> পাসওয়ার্ড রিসেট করুন</button>
+                        {/* <button className="btn" htmlFor="newUser" onClick={() => setNewUser(!newUser)} name="newUser" > <FontAwesomeIcon icon={faUser} /> নতুন অ্যাকাউন্ট</button><br />
+                        <button className="btn" onClick={resetpassbtn} > <FontAwesomeIcon icon={faLock} /> পাসওয়ার্ড রিসেট করুন</button> */}
 
 
                     </form>
